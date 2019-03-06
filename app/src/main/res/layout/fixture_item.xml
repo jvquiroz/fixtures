@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                            android:padding="@dimen/margin_small">
+
+    <TextView
+        android:id="@+id/league_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/League"
+        tools:text="Champions Legue"/>
+
+    <TextView
+        android:id="@+id/venue_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/league_tv"
+        tools:text="Stamford Bridge | "/>
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        app:layout_constraintStart_toEndOf="@+id/venue_tv"
+        app:layout_constraintTop_toBottomOf="@id/league_tv"
+        tools:text="Sep 12, 2017 at 20:00"/>
+
+    <TextView
+        android:id="@+id/home_team_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/venue_tv"
+        android:textAppearance="@style/Team"
+        tools:text="Chelsea FC"/>
+
+    <TextView
+        android:id="@+id/away_team_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_team_tv"
+        android:textAppearance="@style/Team"
+        tools:text="Qarabag"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginRight="90dp"
+        android:background="@color/dividerGray"
+        app:layout_constraintBottom_toBottomOf="@+id/away_team_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_team_tv"/>
+
+    <TextView
+        android:id="@+id/day_number_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_extra_small"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:gravity="center"
+        android:textAppearance="@style/DayNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:text="12"/>
+
+    <TextView
+        android:id="@+id/home_score_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/score"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/home_team_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        tools:text="2"/>
+
+    <TextView
+        android:id="@+id/away_score_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/score"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/away_team_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        tools:text="0"/>
+
+    <TextView
+        android:id="@+id/day_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_extra_small"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:gravity="center"
+        android:textAppearance="@style/DayName"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        tools:text="SUN"/>
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/status"
+        android:background="@color/orange"
+        tools:text="Cancelled"/>
+
+</android.support.constraint.ConstraintLayout>
